@@ -1,0 +1,60 @@
+Main:
+
++ sistema: Sistema // objeto Sistema
+
+- ejecutar(): void // se llama al sistema.arrancarJuego();
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Sistema: 
+
++ pausa: boolean // bool para saber si el juego esta en pausa.
++ cant_ticks: // cantidad de toques que da el jugador.
++ time: int[] // array en donde mide el tiempo.
++ planeta: Planeta
++ interface: Interface
+
+- arrancarJuego(): void // llama a los constructores de objetos (Planeta, Interface).
+- mostrarInstrucciones(): void
+- pausar(): void 
+- despausar(): void 
+- getVelocidad(): float // devuelve la velocidad de planeta.
+- getMusica(): Track // devuelve el track que esta sonando en el momento
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Interface:
+
++ musica: Track[]. // array de musica
++ imagenes: Imagen[]. // array de imagenes
+
+- crearInterface(): Interface // constructor de interface.
+- mostrarMenu(): void // desplega el menu.
+- cambiarMusica(velocidad): Track // cambia la musica acorde a la velocidad.
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Planeta:
+
++ velocidad: float
++ rotacion: float // rotacion del planeta
++ imagen: Imagen // imagen del planera
+
+- crearPlaneta(imagen): Planeta // constructor del planeta
+- acelerar(velocidad): float
+- desacelerar(velocidad): float
+- ralentizar(time): float // ralentiza el mismo planeta
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Track
+
++ nombre: String
++ track: mp3
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Imagen
+
++ nombre: String 
++ imagen: png
