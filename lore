@@ -14,12 +14,16 @@ Sistema:
 + planeta: Planeta
 + interface: Interface
 
-- arrancarJuego(): void // llama a los constructores de objetos (Planeta, Interface).
-- mostrarInstrucciones(): void
+- arrancarJuego(): void // llama a los constructores de objetos (Planeta, Interface). Mediante ek ultimo autoSave
+  - checkearSave() // buscar antiguo save y preguntar si desea abrirlo
 - pausar(): void 
 - despausar(): void 
 - getVelocidad(): float // devuelve la velocidad de planeta.
 - getMusica(): Track // devuelve el track que esta sonando en el momento
+- autoSave();
+- contVueltas();
+- maxVuelta();
+- conTaps(); // 
 
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
@@ -31,18 +35,20 @@ Interface:
 - crearInterface(): Interface // constructor de interface.
 - mostrarMenu(): void // desplega el menu.
 - cambiarMusica(velocidad): Track // cambia la musica acorde a la velocidad.
+- mostrarInstrucciones(): void
+- mostrarStats(); // muestra las estadisticas(cont-vueltas, cont-taps, max-velocidad, SHARE)
+- menuMejoras(); 
+- menuLogros();
 
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 Planeta:
 
 + velocidad: float
-+ rotacion: float // rotacion del planeta
 + imagen: Imagen // imagen del planera
 
 - crearPlaneta(imagen): Planeta // constructor del planeta
 - acelerar(velocidad): float
-- desacelerar(velocidad): float
 - ralentizar(time): float // ralentiza el mismo planeta
 
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -58,3 +64,30 @@ Imagen
 
 + nombre: String 
 + imagen: png
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Mejoras
+
+// Cohetes
+// Mano de dios
+// Magnetic Tesla NO IMAN
+// Millones de ventiladores
+// Ciclos Solars
+// Meteoritos
+// Rayo de Ovni
+// Juguete a cuerda
+// Men In Black servicio privado
+// Domos en ciudaes anti-meteoros
+// Protector solar, un abrigo anti-termicos, anti-ondaExpansiva.
+// Sol artiffical (anti-pulsar)
+
+Desasatres
+
+// Ralentizaciont total
+// Caida de meteoritos
+// Rqafaga solares, danio a la tierra
+// Terremotos-Tsunamis por velocidad
+// Super-terremoto en caso de sacudir mucho el celular (final altertno)
+// Ciclos solares termicos (que obligue al jugador a hacer girar la tierra mas rapido, pos se va ek agua)
+// Pulsar (final, noche eterna)
